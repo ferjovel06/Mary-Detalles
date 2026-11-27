@@ -1,24 +1,65 @@
 # Python y Django
 .venv/
+venv/
+env/
 __pycache__/
 *.py[cod]
 *.sqlite3
 *.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+*.db
+*.dump
+*.sql
 /backend/media/
 /backend/staticfiles/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
 
 # Variables de entorno
 .env
 .env.*
 !.env.example
+!.env.*.example
+.envrc
+*.local
+
+# Credenciales, claves y exportaciones privadas
+secrets/
+credentials/
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+.npmrc
+.pypirc
+.netrc
+*.postman_environment.json
+*.postman_globals.json
+.postman/
 
 # React y Vite
 node_modules/
 dist/
 dist-ssr/
+coverage/
+*.tsbuildinfo
 
 # Logs
 *.log
+*.bak
+*.orig
+*.swp
+*.swo
+.idea/
+.vscode/*
+!.vscode/extensions.json
 
 # Archivos del sistema
 .DS_Store
