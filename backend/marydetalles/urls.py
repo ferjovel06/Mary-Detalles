@@ -1,22 +1,16 @@
-"""
-URL configuration for marydetalles project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/6.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path
 
+from crm.api import LeadDetailView, LeadsView, health
+from crm.documentation import openapi_schema, swagger_ui
+from crm.login import LoginView
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
+    path("api/schema/", openapi_schema, name="openapi-schema"),
+    path("api/docs/", swagger_ui, name="swagger-ui"),
+    path("api/health/", health),
+    path("api/auth/token/", LoginView.as_view()),
+    path("api/leads/", LeadsView.as_view()),
+    path("api/leads/<int:pk>/", LeadDetailView.as_view()),
 ]
