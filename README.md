@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 # 🎁 Mary Detalles
 
@@ -140,8 +140,8 @@ Los diseños y flujos de navegación se mantendrán en Figma. Las tareas, respon
 
 | Recurso | Enlace |
 | --- | --- |
-| Prototipo en Figma | *Pendiente de agregar* |
-| Tablero del backlog | *Pendiente de agregar* |\
+| Prototipo en Figma | [Ver prototipo](https://www.figma.com/design/q2HiEVQQKl0NNbUBaJDJTM/MARY-DETALLES-%E2%80%93-GU%C3%8DA-DE-ESTILO.?node-id=58-2&p=f&t=1YMaKpECiCSphoeb-0) |
+| Tablero del backlog | [Ver Tablero](https://github.com/users/ferjovel06/projects/2/views/1) |
 
 ## Convenciones de trabajo
 
