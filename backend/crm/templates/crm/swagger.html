@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mary Detalles CRM · Swagger UI</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui.css">
+</head>
+<body>
+  <main id="swagger-ui" data-schema-url="{% url 'openapi-schema' %}"></main>
+  <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui-bundle.js"></script>
+  <script>
+    const container = document.getElementById('swagger-ui')
+    if (window.SwaggerUIBundle) {
+      window.SwaggerUIBundle({
+        url: container.dataset.schemaUrl,
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        validatorUrl: null,
+        persistAuthorization: false,
+      })
+    } else {
+      container.textContent = 'No se pudo cargar Swagger UI. Podés abrir el esquema OpenAPI directamente.'
+      const link = document.createElement('a')
+      link.href = container.dataset.schemaUrl
+      link.textContent = ' Ver esquema OpenAPI'
+      container.append(link)
+    }
+  </script>
+</body>
+</html>
